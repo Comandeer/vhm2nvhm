@@ -1,0 +1,23 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	root /var/www/test/public_html;
+
+	index index.html index.php index.htm index.nginx-debian.html;
+
+	server_name test.dev;
+
+	location / {
+try_files $uri $uri/ /index.php;
+}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/var/run/php5-fpm.sock;
+	}
+
+	location ~ /\.ht {
+		deny all;
+	}
+}

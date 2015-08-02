@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+	ServerName test.dev
+	ServerAlias *.test.dev
+	DocumentRoot /var/www/test/public_html
+
+	<Directory />
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+	RewriteEngine On
+RewriteOptions Inherit
+</VirtualHost>

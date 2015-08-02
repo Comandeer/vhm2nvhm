@@ -1,0 +1,36 @@
+{
+  "name": "vhm2nvhm",
+  "version": "0.0.0",
+  "description": "Small utility to convert Apache's vhosts to nginx's vhosts",
+  "preferGlobal": true,
+  "main": "index",
+  "bin": {
+    "vhm2nvhm": "index"
+  },
+  "scripts": {
+    "test": "node --harmony ./tests/run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Comandeer/vhm2nvhm.git"
+  },
+  "keywords": [
+    "apache",
+    "nginx",
+    "vhost"
+  ],
+  "author": "Comandeer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Comandeer/vhm2nvhm/issues"
+  },
+  "homepage": "https://github.com/Comandeer/vhm2nvhm#readme",
+  "dependencies": {
+    "cli": "^0.9.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "mock-fs": "^3.0.0"
+  }
+}
